@@ -1,0 +1,5586 @@
+[
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go left",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  },
+  {
+    "move": "go right",
+    "view": "no-op"
+  }
+]

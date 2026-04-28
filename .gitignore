@@ -1,2 +1,71 @@
-outputs
-checkpoints
+# --- Python / tooling ---
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+ENV/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Caches ---
+.cache/
+
+# --- Model weights / binaries ---
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+*.h5
+*.hdf5
+*.tflite
+*.pkl
+*.joblib
+*.npz
+*.npy
+*.whl
+
+# --- Logs / output artifacts ---
+logs/
+*.log
+outputs/
+outputs_*/
+outputs-*/
+**/outputs/
+**/outputs_*/
+**/outputs-*/
+
+# --- Experiments (generated runs & artifacts) ---
+experiments/
+experiments/runs/
+experiments/**/runs/
+experiments/**/logs/
+experiments/**/smoke/
+experiments/**/full/
+
+# --- Local experiments / scratch dirs (date-stamped) ---
+*apr*_experiments/
+*apr*_images/
+*apr*_image/
+apr*_img_inputs/
+
+# --- Generated media ---
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.gif

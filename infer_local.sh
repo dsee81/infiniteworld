@@ -7,10 +7,13 @@
 # Single GPU (num_gpus=1): runs "python scripts/..." directly, no port needed.
 # Multi GPU: runs torchrun. If EADDRINUSE, set: export MASTER_PORT=29500
 
-NUM_GPUS=${1:-1}
-WORK_DIR="/mnt/dolphinfs/ssd_pool/docker/user/hadoop-videogen-hl/hadoop-camera3d/wuruiqi/infinite-world"
+set -euo pipefail
 
-cd $WORK_DIR
+NUM_GPUS=${1:-1}
+# Default: repo root (directory containing this script).
+WORK_DIR="${WORK_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
+
+cd "$WORK_DIR"
 
 echo "=============================================="
 echo "Infinite World - Local Inference"

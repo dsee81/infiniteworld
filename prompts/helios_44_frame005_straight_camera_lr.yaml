@@ -1,0 +1,6 @@
+# Infinite World - Helios 44 frame 5 as image condition, straight motion, camera left then right
+# Format: [prompt, condition_image_path, action_json_path]
+prompts:
+  - - A realistic forward-moving outdoor scene from the provided video frame. The motion continues straight while the camera first pans left, then later pans right.
+    - ./assets/custom/44_frame005.jpg
+    - ./assets/custom/44_straight_camera_left_right.json

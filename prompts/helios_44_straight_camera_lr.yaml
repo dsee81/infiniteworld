@@ -1,0 +1,6 @@
+# Infinite World - Helios 44 straight motion, camera left then right
+# Format: [prompt, condition_image_path_or_video_path, action_json_path]
+prompts:
+  - - A realistic forward-moving outdoor scene from the provided video. The motion continues straight while the camera first pans left, then later pans right.
+    - /scratch/users/ntu/dsee009/Helios/data/7fps_video/44.mp4
+    - ./assets/custom/44_straight_camera_left_right.json

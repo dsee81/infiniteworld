@@ -1,0 +1,60 @@
+#!/bin/bash
+#PBS -N InfWorld_FB_LR_4G
+#PBS -l select=1:ncpus=48:mpiprocs=4:ngpus=4:mem=220gb
+#PBS -l walltime=04:00:00
+#PBS -q normal
+#PBS -P personal-dsee009
+#PBS -j oe
+#PBS -o logs/infworld_i2v_sample_fb_cam_lr_4gpu.log
+
+set -euo pipefail
+
+cd "$PBS_O_WORKDIR"
+
+module load cuda/12.2.2
+module load gcc/11.2.0
+
+source activate infworld
+
+export PYTHONUNBUFFERED=1
+export HF_HOME=/scratch/users/ntu/dsee009/hf_cache
+export TRANSFORMERS_CACHE="$HF_HOME/transformers"
+export TORCH_HOME=/scratch/users/ntu/dsee009/torch_cache
+export CUDNN_ROOT=/scratch/users/ntu/dsee009/conda_new_cache/envs/infworld/lib/python3.10/site-packages/nvidia/cudnn
+export LD_LIBRARY_PATH=/opt/cray/pe/gcc/11.2.0/snos/lib64:"$CUDNN_ROOT/lib":/app/apps/cuda/12.2.2/lib64:${LD_LIBRARY_PATH:-}
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+export INFWORLD_MAX_TASKS=1
+export INFWORLD_NUM_CHUNKS=4
+export INFWORLD_CONTEXT_PARALLEL_SIZE=4
+export INFWORLD_PROMPTS_YAML=/scratch/users/ntu/dsee009/infworld/Infinite-World/prompts/demo_forward_backward_camera_lr.yaml
+export INFWORLD_OUTPUT_BASE=/scratch/users/ntu/dsee009/infworld/Infinite-World/outputs_sample_fb_cam_lr_4gpu
+
+mkdir -p logs outputs_sample_fb_cam_lr_4gpu "$HF_HOME" "$TRANSFORMERS_CACHE" "$TORCH_HOME"
+rm -f logs/infworld_i2v_sample_fb_cam_lr_4gpu.log
+
+echo "Job ID: ${PBS_JOBID:-unknown}"
+echo "Host: $(hostname)"
+echo "Workdir: $(pwd)"
+echo "Python: $(which python)"
+echo "Prompt yaml: $INFWORLD_PROMPTS_YAML"
+echo "Output base: $INFWORLD_OUTPUT_BASE"
+echo "Context parallel size: $INFWORLD_CONTEXT_PARALLEL_SIZE"
+
+python -c "import torch; print('torch', torch.__version__); print('cuda available', torch.cuda.is_available()); print('cuda devices', torch.cuda.device_count()); [print(f'device{i}', torch.cuda.get_device_name(i)) for i in range(torch.cuda.device_count())]"
+python - <<'PY'
+import json
+from collections import Counter
+p='assets/example_case/0001_forward_backward_camera_lr.json'
+a=json.load(open(p))
+print('action length', len(a))
+print('first action', a[0], 'action@159', a[159], 'action@160', a[160], 'last action', a[-1])
+print('counts', Counter((x['move'], x['view']) for x in a))
+PY
+
+MASTER_PORT=${MASTER_PORT:-29424}
+torchrun --nnodes=1 --nproc_per_node=4 \
+    --rdzv_id=infworld_fb_lr_4g_${PBS_JOBID:-manual} \
+    --rdzv_backend=c10d \
+    --rdzv_endpoint=localhost:${MASTER_PORT} \
+    scripts/infworld_inference.py

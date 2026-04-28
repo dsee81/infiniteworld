@@ -25,7 +25,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT)
 
 from infworld.utils.prepare_dataloader import get_obj_from_str
-from infworld.utils.data_utils import get_first_clip_from_video, save_silent_video
+from infworld.utils.data_utils import (
+    get_first_clip_from_video,
+    get_last_clip_from_video,
+    save_silent_video_overwrite,
+)
 from infworld.utils.dataset_utils import is_vid, is_img
 
 # ============================================================================
@@ -101,10 +105,47 @@ def load_action_sequence(action_path):
     view_indices = [VIEW_ACTION_MAP[a['view']] for a in actions]
     return move_indices, view_indices
 
-def load_condition_image(image_path, bucket_config):
+def _parse_cond_clip_len(value):
+    """
+    Parse INFWORLD_COND_CLIP_LEN.
+    Accepts:
+      - integer string >= 1 (e.g. "1", "16", "81")
+      - "all" / "none" / "-1" to mean "use entire video" (clip_len=None)
+    """
+    if value is None:
+        return 1
+    v = str(value).strip().lower()
+    if v in {"all", "none", "-1"}:
+        return None
+    try:
+        n = int(v)
+    except ValueError as e:
+        raise ValueError(f"Invalid INFWORLD_COND_CLIP_LEN={value!r}. Use an int >= 1 or 'all'.") from e
+    if n < 1:
+        raise ValueError(f"Invalid INFWORLD_COND_CLIP_LEN={value!r}. Must be >= 1 or 'all'.")
+    return n
+
+def load_condition_image(image_path, bucket_config, cond_clip_len=None, cond_clip_mode=None):
     """Load and preprocess condition image."""
     if is_vid(image_path):
-        frames = get_first_clip_from_video(image_path, clip_len=1)
+        # By default we condition on a single frame for efficiency.
+        # Set INFWORLD_COND_CLIP_LEN (e.g. 16/32/81 or 'all') to use video context.
+        if cond_clip_len is None:
+            cond_clip_len = os.environ.get("INFWORLD_COND_CLIP_LEN", "1")
+        if cond_clip_mode is None:
+            cond_clip_mode = os.environ.get("INFWORLD_COND_CLIP_MODE", "first")
+
+        clip_len = _parse_cond_clip_len(cond_clip_len)
+        clip_mode = str(cond_clip_mode).strip().lower()
+        if clip_mode not in {"first", "last"}:
+            raise ValueError("INFWORLD_COND_CLIP_MODE must be 'first' or 'last'")
+        if clip_len is None:
+            # "all" means full video regardless of clip_mode.
+            frames = get_first_clip_from_video(image_path, clip_len=None)
+        elif clip_mode == "last":
+            frames = get_last_clip_from_video(image_path, clip_len=clip_len)
+        else:
+            frames = get_first_clip_from_video(image_path, clip_len=clip_len)
     elif is_img(image_path):
         image = cv2.imread(image_path)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -151,13 +192,18 @@ local_rank, global_rank, num_processes, use_dist = setup_distributed()
 print(f"[InfWorld] local_rank: {local_rank} | global_rank: {global_rank} | world_size: {num_processes}")
 
 # Context parallel setup
-context_parallel_size = 1
+context_parallel_size = int(os.environ.get("INFWORLD_CONTEXT_PARALLEL_SIZE", "1"))
+if num_processes % context_parallel_size != 0:
+    raise ValueError(
+        f"INFWORLD_CONTEXT_PARALLEL_SIZE={context_parallel_size} must divide world_size={num_processes}"
+    )
 import infworld.context_parallel.context_parallel_util as cp_util
 if use_dist:
-    from infworld.context_parallel.context_parallel_util import init_context_parallel, get_dp_size, get_dp_rank
+    from infworld.context_parallel.context_parallel_util import init_context_parallel, get_dp_size, get_dp_rank, get_cp_rank
     init_context_parallel(context_parallel_size=context_parallel_size, global_rank=global_rank, world_size=num_processes)
     dp_rank = get_dp_rank()
     dp_size = get_dp_size()
+    cp_rank = get_cp_rank()
 else:
     # Single process: set globals so get_dp_rank/get_dp_size work without dist
     cp_util.dp_rank = 0
@@ -166,30 +212,48 @@ else:
     cp_util.cp_size = 1
     dp_rank = 0
     dp_size = 1
+    cp_rank = 0
 enable_context_parallel = (context_parallel_size > 1)
 
 # ============================================================================
 # Configuration
 # ============================================================================
 # Inference settings
-GLOBAL_SEED = 42
+GLOBAL_SEED = int(os.environ.get("INFWORLD_SEED", "42"))
 setup_seed(GLOBAL_SEED + global_rank)
+SEED_PER_TASK = os.environ.get("INFWORLD_SEED_PER_TASK", "0") != "0"
+SEED_TASK_STRIDE = int(os.environ.get("INFWORLD_SEED_TASK_STRIDE", "1000"))
 
-TEXT_CFG_SCALE = 5.0
-NUM_SAMPLING_STEPS = 30
-SHIFT = 7  # PX256: 3, PX627: 7, PX960: 11
-NUM_CHUNKS = 13  # Number of video chunks to generate
-HIGH_QUALITY_SAVE = True
+def get_env_int(name, default):
+    value = os.environ.get(name)
+    return default if value is None else int(value)
+
+
+def get_env_float(name, default):
+    value = os.environ.get(name)
+    return default if value is None else float(value)
+
+
+TEXT_CFG_SCALE = get_env_float("INFWORLD_TEXT_CFG_SCALE", 5.0)
+NUM_SAMPLING_STEPS = get_env_int("INFWORLD_NUM_SAMPLING_STEPS", 30)
+SHIFT = get_env_int("INFWORLD_SHIFT", 7)  # PX256: 3, PX627: 7, PX960: 11
+NUM_CHUNKS = get_env_int("INFWORLD_NUM_CHUNKS", 13)  # Number of video chunks to generate
+MAX_TASKS = get_env_int("INFWORLD_MAX_TASKS", 0) or None
+HIGH_QUALITY_SAVE = os.environ.get("INFWORLD_HIGH_QUALITY_SAVE", "1") != "0"
+COND_WINDOW_FRAMES = int(os.environ.get("INFWORLD_COND_WINDOW_FRAMES", "0"))  # 0 = use full buffer
 
 # Paths - checkpoint_path is read from config (configs/infworld_config.yaml)
 # Model config - use standalone config
 CONFIG_PATH = os.path.join(PROJECT_ROOT, 'configs', 'infworld_config.yaml')
 
-PROMPTS_YAML = os.path.join(PROJECT_ROOT, 'prompts', 'demo.yaml')
+PROMPTS_YAML = os.environ.get(
+    "INFWORLD_PROMPTS_YAML",
+    os.path.join(PROJECT_ROOT, 'prompts', 'demo.yaml'),
+)
 BUCKET_CONFIG_NAME = 'ASPECT_RATIO_627_F64'
 
 # Output directory
-OUTPUT_BASE = os.path.join(PROJECT_ROOT, 'outputs')
+OUTPUT_BASE = os.environ.get("INFWORLD_OUTPUT_BASE", os.path.join(PROJECT_ROOT, 'outputs'))
 
 # Negative prompt for generation quality
 NEGATIVE_PROMPT = "many cars, crowds, Vivid hues, overexposed, static, blurry details, subtitles, style, work, artwork, image, still, overall grayish, worst quality, low quality, JPEG compression artifacts, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn face, deformed, disfigured, deformed limbs, fused fingers, motionless image, cluttered background, three legs, crowded background, walking backwards."
@@ -220,6 +284,55 @@ def load_dit_state_dict(checkpoint_path):
     return state_dict
 
 
+def load_prompt_entries(prompts_path):
+    """Load and validate prompt entries from YAML."""
+    cfg = OmegaConf.load(prompts_path)
+    if "prompts" not in cfg:
+        raise ValueError(f"Prompt YAML missing 'prompts': {prompts_path}")
+
+    prompts = OmegaConf.to_container(cfg.prompts, resolve=True)
+    validated = []
+    for idx, entry in enumerate(prompts):
+        # Supported formats:
+        #  1) Legacy list: [prompt, cond_path, action_path] or [..., output_name]
+        #  2) Dict: {prompt, cond_path/image_path, action_path, output_name?, cond_clip_len?, cond_clip_mode?}
+        cond_clip_len = None
+        cond_clip_mode = None
+        if isinstance(entry, (list, tuple)) and len(entry) in (3, 4):
+            prompt, image_path, action_path = entry[0], entry[1], entry[2]
+            output_name = entry[3] if len(entry) == 4 else None
+        elif isinstance(entry, dict):
+            prompt = entry.get("prompt")
+            image_path = entry.get("cond_path", entry.get("image_path"))
+            action_path = entry.get("action_path")
+            output_name = entry.get("output_name")
+            cond_clip_len = entry.get("cond_clip_len")
+            cond_clip_mode = entry.get("cond_clip_mode")
+        else:
+            raise ValueError(
+                f"Prompt entry {idx} must be a list [prompt, cond_path, action_path] "
+                f"(+ optional output_name) or a mapping with keys "
+                f"prompt/cond_path/action_path in {prompts_path}"
+            )
+        if not isinstance(prompt, str):
+            raise ValueError(
+                f"Prompt entry {idx} has non-string prompt {type(prompt).__name__}. "
+                "Quote prompt text that contains ':' in YAML."
+            )
+        if not isinstance(image_path, str) or not isinstance(action_path, str):
+            raise ValueError(
+                f"Prompt entry {idx} image/action paths must be strings in {prompts_path}"
+            )
+        if output_name is not None and not isinstance(output_name, str):
+            raise ValueError(
+                f"Prompt entry {idx} output_name must be a string in {prompts_path}"
+            )
+
+        validated.append((prompt, image_path, action_path, output_name, cond_clip_len, cond_clip_mode))
+
+    return validated
+
+
 def main():
     torch_gc()
     
@@ -236,6 +349,18 @@ def main():
     print(f"[InfWorld] Loading checkpoint: {checkpoint_path}")
     print(f"[InfWorld] Config: {config_path}")
     print(f"[InfWorld] Output directory: {output_dir}")
+    print(
+        "[InfWorld] Inference settings: "
+        f"steps={NUM_SAMPLING_STEPS}, chunks={NUM_CHUNKS}, "
+        f"cfg={TEXT_CFG_SCALE}, max_tasks={MAX_TASKS or 'all'}"
+    )
+    print(
+        "[InfWorld] Condition settings: "
+        f"cond_clip_len={os.environ.get('INFWORLD_COND_CLIP_LEN', '1')}, "
+        f"cond_clip_mode={os.environ.get('INFWORLD_COND_CLIP_MODE', 'first')}"
+    )
+    if COND_WINDOW_FRAMES > 0:
+        print(f"[InfWorld] Condition window: last {COND_WINDOW_FRAMES} frames per chunk")
     
     # Resolve relative paths in config for models that load from disk
     if hasattr(args, "vae_cfg") and "vae_pth" in args.vae_cfg:
@@ -288,13 +413,27 @@ def main():
     
     # Load prompts
     prompts_path = os.path.abspath(PROMPTS_YAML)
-    target_prompts = OmegaConf.load(prompts_path).prompts
+    target_prompts = load_prompt_entries(prompts_path)
     print(f"[InfWorld] Loaded {len(target_prompts)} prompts")
     
     # Process each prompt
-    for task_idx, (prompt, image_path, action_path) in enumerate(target_prompts):
+    def _sanitize_output_name(name):
+        # Keep filenames portable and predictable.
+        name = str(name).strip().replace(" ", "_")
+        name = re.sub(r"[^A-Za-z0-9._-]+", "_", name)
+        name = name.strip("._-")
+        return name or "output"
+
+    for task_idx, (prompt, image_path, action_path, output_name, task_cond_clip_len, task_cond_clip_mode) in enumerate(target_prompts):
+        if MAX_TASKS is not None and task_idx >= MAX_TASKS:
+            break
+
         if task_idx % dp_size != dp_rank:
             continue
+
+        # Optional: deterministic per-task reseed for easier large experiment suites.
+        if SEED_PER_TASK:
+            setup_seed(GLOBAL_SEED + global_rank + task_idx * SEED_TASK_STRIDE)
         
         if not os.path.exists(image_path):
             print(f"[InfWorld] Skipping task {task_idx}: Image not found - {image_path}")
@@ -307,7 +446,12 @@ def main():
         print(f"[InfWorld] Task {task_idx}: {prompt[:50]}...")
         
         # Load condition image
-        cond_video = load_condition_image(image_path, bucket_config).to(local_rank)
+        cond_video = load_condition_image(
+            image_path,
+            bucket_config,
+            cond_clip_len=task_cond_clip_len,
+            cond_clip_mode=task_cond_clip_mode,
+        ).to(local_rank)
         
         with torch.no_grad():
             cond_latent = vae.encode(cond_video)
@@ -328,7 +472,13 @@ def main():
             print(f"[InfWorld] Generating chunk {chunk_idx + 1}/{NUM_CHUNKS}")
             
             with torch.no_grad():
-                current_cond = video_buffer.to(local_rank)
+                # For long horizons, conditioning on the entire history can OOM.
+                # Keep full history on CPU, but only feed the last N frames to the model.
+                cond_for_encode = video_buffer
+                if COND_WINDOW_FRAMES > 0 and video_buffer.shape[2] > COND_WINDOW_FRAMES:
+                    cond_for_encode = video_buffer[:, :, -COND_WINDOW_FRAMES:, :, :]
+
+                current_cond = cond_for_encode.to(local_rank)
                 current_latent = vae.encode(current_cond)
             
             # Get action slice for current chunk
@@ -373,12 +523,27 @@ def main():
                 torch_gc()
         
         # Save final video
-        video_name = f"{task_idx:04d}_{prompt[:30].replace(' ', '_')}"
+        if output_name:
+            video_name = _sanitize_output_name(output_name)
+        else:
+            video_name = f"{task_idx:04d}_{prompt[:30].replace(' ', '_')}"
         save_path = os.path.join(output_dir, video_name)
         
-        quality = 10 if HIGH_QUALITY_SAVE else 5
-        save_silent_video(video_buffer.to(local_rank), save_path, fps=30, quality=quality)
-        print(f"[InfWorld] Saved: {save_path}.mp4")
+        if cp_rank == 0:
+            quality = 10 if HIGH_QUALITY_SAVE else 5
+            save_silent_video_overwrite(
+                video_buffer.to(local_rank),
+                save_path,
+                fps=30,
+                quality=quality,
+                high_quality_save=HIGH_QUALITY_SAVE,
+            )
+            print(f"[InfWorld] Saved: {save_path}.mp4")
+        elif use_dist:
+            print(f"[InfWorld] Skipping save on context-parallel rank {cp_rank}")
+
+        if use_dist:
+            dist.barrier()
 
 if __name__ == "__main__":
     main()

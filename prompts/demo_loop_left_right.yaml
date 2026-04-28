@@ -1,0 +1,6 @@
+# Infinite World - left then right action-loop test
+# Format: [prompt, condition_image_path, action_json_path]
+prompts:
+  - - A serene campus walkway lined with modern glass buildings, green ivy climbing some walls, empty benches, soft dappled sunlight through maple trees. The camera first moves left, then later moves right.
+    - ./assets/example_case/0001.jpg
+    - ./assets/example_case/0001_loop_left_right.json

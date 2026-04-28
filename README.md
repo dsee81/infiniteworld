@@ -87,6 +87,21 @@ Download checkpoints from [https://huggingface.co/MeiGen-AI/Infinite-World](http
 
 ---
 
+## Experiments / Inference
+
+Self-serve experiment workflow (suite YAML, action generation, and all inference knobs):
+
+- `docs/EXPERIMENTS.md`
+
+Main inference entrypoint:
+
+- `scripts/infworld_inference.py`
+
+Helpers:
+
+- `scripts/infworld_actiongen.py` (generate action JSON by chunk)
+- `scripts/infworld_suite.py` (materialize a multi-task run directory from one suite YAML)
+
 ## Results
 
 ### Quantitative Comparison

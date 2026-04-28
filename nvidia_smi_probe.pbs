@@ -1,0 +1,29 @@
+#!/bin/bash
+#PBS -N nvidia_smi_probe
+#PBS -l select=1:ncpus=1:mpiprocs=1:ngpus=1:mem=4gb
+#PBS -l walltime=00:05:00
+#PBS -q normal
+#PBS -P personal-dsee009
+#PBS -j oe
+#PBS -o logs/nvidia_smi_probe.log
+
+set -euo pipefail
+
+cd "$PBS_O_WORKDIR"
+mkdir -p logs
+
+echo "Job ID: ${PBS_JOBID:-unknown}"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo "Workdir: $(pwd)"
+echo
+
+echo "Loaded modules:"
+module list 2>&1 || true
+echo
+
+echo "nvidia-smi path:"
+command -v nvidia-smi || true
+echo
+
+nvidia-smi

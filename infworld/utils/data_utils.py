@@ -660,14 +660,18 @@ def save_silent_video(gen_video_samples, save_path, fps=25, quality=10, high_qua
     if high_quality_save:
         ffmpeg_params = [
             '-c:v', 'libx264',
-            '-crf', '0',          # 无损模式
-            '-preset', 'veryslow' # 最高压缩率
+            '-crf', '18',
+            '-preset', 'slow',
+            '-pix_fmt', 'yuv420p',
+            '-movflags', '+faststart',
         ]
     else:
         ffmpeg_params = [
             '-c:v', 'libx264',
             '-crf', '23',         # 默认质量 (0-51, 越小质量越高)
-            '-preset', 'medium'
+            '-preset', 'medium',
+            '-pix_fmt', 'yuv420p',
+            '-movflags', '+faststart',
         ]
     
     # 使用imageio保存
@@ -717,14 +721,18 @@ def save_silent_video_overwrite(gen_video_samples, save_path, fps=25, quality=5,
     if high_quality_save:
         ffmpeg_params = [
             '-c:v', 'libx264',
-            '-crf', '0',          # 无损模式
-            '-preset', 'veryslow' # 最高压缩率
+            '-crf', '18',
+            '-preset', 'slow',
+            '-pix_fmt', 'yuv420p',
+            '-movflags', '+faststart',
         ]
     else:
         ffmpeg_params = [
             '-c:v', 'libx264',
             '-crf', '23',         # 默认质量 (0-51, 越小质量越高)
-            '-preset', 'medium'
+            '-preset', 'medium',
+            '-pix_fmt', 'yuv420p',
+            '-movflags', '+faststart',
         ]
     
     # 使用imageio保存

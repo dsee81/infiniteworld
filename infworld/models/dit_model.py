@@ -403,9 +403,17 @@ def rope_apply(x, grid_sizes, freqs, enable_context_parallel=False):
                             dim=-1).reshape(seq_len, 1, -1)
 
         if enable_context_parallel:
-            freqs_i = rearrange(freqs_i, "(T S) B C -> T S B C", T=f)
-            freqs_i = context_parallel_util.split_cp(freqs_i, seq_dim=1)
-            freqs_i = rearrange(freqs_i, "T S B C -> (T S) B C")
+            # Token tensors are split over the flattened spatial dimension for
+            # each frame. Build full RoPE frequencies, then keep this rank's
+            # spatial slice when the incoming sequence is already local.
+            if x_i.shape[0] != seq_len:
+                freqs_i = rearrange(freqs_i, "(T S) B C -> T S B C", T=f)
+                freqs_i = context_parallel_util.split_cp(freqs_i, seq_dim=1)
+                freqs_i = rearrange(freqs_i, "T S B C -> (T S) B C")
+                if x_i.shape[0] != freqs_i.shape[0]:
+                    raise RuntimeError(
+                        f"RoPE local sequence mismatch: x={x_i.shape[0]}, freqs={freqs_i.shape[0]}"
+                    )
 
         # apply rotary embedding
         x_i = torch.view_as_real(x_i * freqs_i).flatten(2)
@@ -566,26 +574,26 @@ class WanSelfAttention(nn.Module):
             v = v * expanded_select_mask
 
         if self.enable_context_parallel:
-            # cp_size = context_parallel_util.get_cp_size()
-            # half_dtypes = (torch.float16, torch.bfloat16)
-            # def half(x):
-            #     return x if x.dtype in half_dtypes else x.to(dtype)
+            cp_size = context_parallel_util.get_cp_size()
+            num_c = getattr(self, "num_c", 0)
+            if num_c > 0 and num_c < s:
+                q_attn = q[:, num_c:]
+            else:
+                q_attn = q
 
-            # max_seqlen_q = s * cp_size
-            # max_seqlen_kv = max_seqlen_q
-            # x = self.core_attn(
-            #     half(q) if self.fp32_infer else q.type_as(x),
-            #     half(k) if self.fp32_infer else k.type_as(x),
-            #     half(v) if self.fp32_infer else v.type_as(x),
-            #     core_attention_bias_type="no_bias",
-            #     core_attention_bias=None,
-            #     cu_seqlens_q=None,
-            #     cu_seqlens_kv=None,
-            #     max_seqlen_q=max_seqlen_q,
-            #     max_seqlen_kv=max_seqlen_kv,
-            # )
-            # x = rearrange(x, "B S (H D) -> B S H D", H=self.num_heads)
-            raise(NotImplementedError)
+            max_seqlen_q = q_attn.shape[1] * cp_size
+            max_seqlen_kv = max_seqlen_q
+            x = self.core_attn(
+                q_attn.type_as(x),
+                k.type_as(x),
+                v.type_as(x),
+                core_attention_bias_type="no_bias",
+                core_attention_bias=None,
+                cu_seqlens_q=None,
+                cu_seqlens_kv=None,
+                max_seqlen_q=max_seqlen_q,
+                max_seqlen_kv=s * cp_size,
+            ).type_as(x)
         else:
             B, S, H, D = q.shape
             # 👉 你需要提前传入 num_c（或在这里根据场景算出）
@@ -758,8 +766,11 @@ class WanAttentionBlock(nn.Module):
         hist, noisy = x[:, :num_hist], x[:, num_hist:]
         _, H, W = grid_sizes[0].tolist()  # 假设所有样本一致
         B = grid_sizes.shape[0]
-        T_noisy = noisy.shape[1] // (H * W)
-        T_hist= hist.shape[1] // (H * W)
+        spatial_tokens = H * W
+        if self.enable_context_parallel:
+            spatial_tokens = spatial_tokens // context_parallel_util.get_cp_size()
+        T_noisy = noisy.shape[1] // spatial_tokens
+        T_hist= hist.shape[1] // spatial_tokens
 
         grid_sizes_noisy = torch.tensor([T_noisy, H, W], device=grid_sizes.device).unsqueeze(0).repeat(B, 1)
         grid_sizes_hist = torch.tensor([T_hist, H, W], device=grid_sizes.device).unsqueeze(0).repeat(B, 1)
@@ -1105,7 +1116,10 @@ class WanModel(nn.Module):
         T_cond = image_cond.shape[2] # 新的 T_cond 约为 21 (20 + 1 loc_mem)
         num_c = (T_cond // self.patch_size[0]) * (H // self.patch_size[1]) * (W // self.patch_size[2])
         for block in self.blocks:
-            block.self_attn.num_c = num_c
+            if self.enable_context_parallel:
+                block.self_attn.num_c = num_c // context_parallel_util.get_cp_size()
+            else:
+                block.self_attn.num_c = num_c
         dtype = self.patch_embedding.weight.dtype
         x = x.to(dtype)
         t = t.to(dtype)
