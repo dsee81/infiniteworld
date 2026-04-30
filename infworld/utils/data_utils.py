@@ -16,9 +16,13 @@ from moviepy.editor import AudioFileClip, VideoClip
 
 
 import torch
-from torchvision.io import write_video
 from torchvision.utils import save_image
 import torchvision.transforms as transforms
+
+try:
+    from torchvision.io import write_video
+except ImportError:
+    write_video = None
 
 import binascii
 import torchvision
@@ -30,6 +34,24 @@ def infinite_iterator(iter):
     while True:
         for sample in iter:
             yield sample
+
+
+def _write_video_compat(save_path, frames, fps):
+    """
+    Write uint8 video frames using torchvision when available, otherwise imageio.
+    """
+    if write_video is not None:
+        write_video(save_path, frames, fps=fps, video_codec="h264")
+        return
+
+    with imageio.get_writer(
+        save_path,
+        fps=fps,
+        codec="libx264",
+        ffmpeg_params=["-pix_fmt", "yuv420p"],
+    ) as writer:
+        for frame in frames.cpu().numpy():
+            writer.append_data(frame)
 
 ### Moved from opensora dataset utils
 def save_sample(x, fps=8, save_path=None, normalize=True, value_range=(-1, 1)):
@@ -57,7 +79,7 @@ def save_sample(x, fps=8, save_path=None, normalize=True, value_range=(-1, 1)):
             x = x.sub(low).div(max(high - low, 1e-5))
 
         x = x.mul(255).add(0.5).clamp(0, 255).permute(1, 2, 3, 0).to("cpu", torch.uint8)
-        write_video(save_path, x, fps=fps, video_codec="h264")
+        _write_video_compat(save_path, x, fps)
     print(f"Saved to {save_path}")
     return x
 

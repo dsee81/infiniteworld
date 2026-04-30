@@ -20,8 +20,9 @@ import torch.distributed as dist
 import torchvision.transforms as transforms
 import re
 
-# Add project root to path
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Add original project root to path so unchanged modules are imported from the main repo.
+VARIANT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(VARIANT_ROOT, "..", ".."))
 sys.path.insert(0, PROJECT_ROOT)
 
 from infworld.utils.prepare_dataloader import get_obj_from_str
@@ -59,6 +60,35 @@ VIEW_ACTION_MAP = {
     'turn down and turn left': 7,
     'turn down and turn right': 8,
     'uncertain': 9
+}
+
+MOVE_ACTION_INV = {idx: name for name, idx in MOVE_ACTION_MAP.items()}
+VIEW_ACTION_INV = {idx: name for name, idx in VIEW_ACTION_MAP.items()}
+
+MOVE_ACTION_WEIGHT = {
+    'no-op': 0.0,
+    'go forward': 1.0,
+    'go back': 1.0,
+    'go left': 1.0,
+    'go right': 1.0,
+    'go forward and go left': 1.5,
+    'go forward and go right': 1.5,
+    'go back and go left': 1.5,
+    'go back and go right': 1.5,
+    'uncertain': 0.5,
+}
+
+VIEW_ACTION_WEIGHT = {
+    'no-op': 0.0,
+    'turn up': 1.0,
+    'turn down': 1.0,
+    'turn left': 1.0,
+    'turn right': 1.0,
+    'turn up and turn left': 1.5,
+    'turn up and turn right': 1.5,
+    'turn down and turn left': 1.5,
+    'turn down and turn right': 1.5,
+    'uncertain': 0.5,
 }
 
 # ============================================================================
@@ -262,8 +292,8 @@ HIGH_QUALITY_SAVE = os.environ.get("INFWORLD_HIGH_QUALITY_SAVE", "1") != "0"
 COND_WINDOW_FRAMES = int(os.environ.get("INFWORLD_COND_WINDOW_FRAMES", "0"))  # 0 = use full buffer
 
 # Paths - checkpoint_path is read from config (configs/infworld_config.yaml)
-# Model config - use standalone config
-CONFIG_PATH = os.path.join(PROJECT_ROOT, 'configs', 'infworld_config.yaml')
+# Model config for this memory-fix variant
+CONFIG_PATH = os.path.join(VARIANT_ROOT, 'infworld_config.yaml')
 
 PROMPTS_YAML = os.environ.get(
     "INFWORLD_PROMPTS_YAML",
@@ -272,7 +302,7 @@ PROMPTS_YAML = os.environ.get(
 BUCKET_CONFIG_NAME = 'ASPECT_RATIO_627_F64'
 
 # Output directory
-OUTPUT_BASE = os.environ.get("INFWORLD_OUTPUT_BASE", os.path.join(PROJECT_ROOT, 'outputs'))
+OUTPUT_BASE = os.environ.get("INFWORLD_OUTPUT_BASE", os.path.join(VARIANT_ROOT, 'outputs'))
 
 # Negative prompt for generation quality
 NEGATIVE_PROMPT = "many cars, crowds, Vivid hues, overexposed, static, blurry details, subtitles, style, work, artwork, image, still, overall grayish, worst quality, low quality, JPEG compression artifacts, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn face, deformed, disfigured, deformed limbs, fused fingers, motionless image, cluttered background, three legs, crowded background, walking backwards."
@@ -349,9 +379,234 @@ def load_prompt_entries(prompts_path):
                 f"Prompt entry {idx} output_name must be a string in {prompts_path}"
             )
 
+        image_path = resolve_path(image_path)
+        action_path = resolve_path(action_path)
         validated.append((prompt, image_path, action_path, output_name, cond_clip_len, cond_clip_mode, action_start_mode))
 
     return validated
+
+
+def _normalize_scores(values):
+    if not values:
+        return []
+    arr = np.asarray(values, dtype=np.float32)
+    arr_min = float(arr.min())
+    arr_max = float(arr.max())
+    if arr_max - arr_min < 1e-8:
+        return [0.0 for _ in values]
+    return ((arr - arr_min) / (arr_max - arr_min)).tolist()
+
+
+def _candidate_descriptor(video_window):
+    pooled = torch.nn.functional.adaptive_avg_pool3d(video_window, (4, 8, 8))
+    return pooled.reshape(-1).cpu().numpy().astype(np.float32)
+
+
+def _window_visual_motion(video_window):
+    if video_window.shape[2] < 2:
+        return 0.0
+    diffs = (video_window[:, :, 1:] - video_window[:, :, :-1]).abs()
+    return float(diffs.mean().item())
+
+
+def _window_action_stats(frame_actions):
+    available = [item for item in frame_actions if item is not None]
+    if not available:
+        return 0.0, 0.0, False
+
+    energies = []
+    changes = 0
+    prev = None
+    for item in available:
+        move_name = item["move"]
+        view_name = item["view"]
+        energies.append(MOVE_ACTION_WEIGHT[move_name] + VIEW_ACTION_WEIGHT[view_name])
+        current = (move_name, view_name)
+        if prev is not None and current != prev:
+            changes += 1
+        prev = current
+
+    action_energy = float(np.mean(energies)) if energies else 0.0
+    denom = max(len(available) - 1, 1)
+    action_change = float(changes / denom)
+    return action_energy, action_change, True
+
+
+def _candidate_overlap(candidate_a, candidate_b):
+    left = max(candidate_a["start"], candidate_b["start"])
+    right = min(candidate_a["end"], candidate_b["end"])
+    return max(0, right - left)
+
+
+def _choose_best_candidate(candidates, selected, key_fn, max_overlap):
+    best = None
+    best_score = None
+    for candidate in candidates:
+        if candidate["selected"]:
+            continue
+        if any(_candidate_overlap(candidate, picked) > max_overlap for picked in selected):
+            continue
+        score = key_fn(candidate)
+        if best is None or score > best_score:
+            best = candidate
+            best_score = score
+    return best
+
+
+def _make_frame_action_history(seed_frames):
+    return [None for _ in range(seed_frames)]
+
+
+def _slice_actions_for_generated_frames(move_tensor, view_tensor):
+    move_ids = move_tensor.detach().cpu().tolist()
+    view_ids = view_tensor.detach().cpu().tolist()
+    frame_actions = []
+    for move_id, view_id in zip(move_ids[1:], view_ids[1:]):
+        frame_actions.append(
+            {
+                "move": MOVE_ACTION_INV[int(move_id)],
+                "view": VIEW_ACTION_INV[int(view_id)],
+            }
+        )
+    return frame_actions
+
+
+def select_history_windows(video_buffer, seed_frame_count, frame_action_history):
+    target_chunks = 4
+    window_frames = 64
+    total_frames = video_buffer.shape[2]
+    total_target_frames = target_chunks * window_frames
+
+    if total_frames <= total_target_frames:
+        return video_buffer
+
+    stride = 16
+    candidates = []
+    for start in range(0, max(total_frames - window_frames, 0) + 1, stride):
+        end = start + window_frames
+        video_window = video_buffer[:, :, start:end, :, :]
+        frame_actions = frame_action_history[start:end]
+        action_energy, action_change, has_actions = _window_action_stats(frame_actions)
+        candidates.append(
+            {
+                "start": start,
+                "end": end,
+                "video_window": video_window,
+                "motion_raw": _window_visual_motion(video_window),
+                "action_energy_raw": action_energy,
+                "action_change_raw": action_change,
+                "has_actions": has_actions,
+                "descriptor": _candidate_descriptor(video_window),
+                "selected": False,
+            }
+        )
+
+    if not candidates:
+        return video_buffer[:, :, -total_target_frames:, :, :]
+
+    motion_norm = _normalize_scores([item["motion_raw"] for item in candidates])
+    action_energy_norm = _normalize_scores([item["action_energy_raw"] for item in candidates])
+    action_change_norm = _normalize_scores([item["action_change_raw"] for item in candidates])
+    recency_norm = _normalize_scores([item["end"] for item in candidates])
+
+    for idx, candidate in enumerate(candidates):
+        candidate["motion"] = motion_norm[idx]
+        candidate["action_energy"] = action_energy_norm[idx] if candidate["has_actions"] else 0.0
+        candidate["action_change"] = action_change_norm[idx] if candidate["has_actions"] else 0.0
+        candidate["recency"] = recency_norm[idx]
+        candidate["seed_region"] = candidate["end"] <= seed_frame_count
+        candidate["visual_score"] = 0.70 * candidate["motion"] + 0.30 * candidate["recency"]
+        if candidate["has_actions"]:
+            candidate["saliency_score"] = (
+                0.40 * candidate["motion"]
+                + 0.35 * candidate["action_energy"]
+                + 0.15 * candidate["action_change"]
+                + 0.10 * candidate["recency"]
+            )
+        else:
+            candidate["saliency_score"] = candidate["visual_score"]
+
+    selected = []
+    max_overlap = 32
+
+    seed_candidates = [item for item in candidates if item["seed_region"]]
+    seed_pick = _choose_best_candidate(
+        seed_candidates,
+        selected,
+        key_fn=lambda item: item["visual_score"],
+        max_overlap=max_overlap,
+    )
+    if seed_pick is not None:
+        seed_pick["selected"] = True
+        selected.append(seed_pick)
+
+    recent_threshold = max(seed_frame_count, total_frames - total_target_frames)
+    recent_candidates = [item for item in candidates if item["start"] >= recent_threshold]
+    recent_pick = _choose_best_candidate(
+        recent_candidates,
+        selected,
+        key_fn=lambda item: item["recency"],
+        max_overlap=max_overlap,
+    )
+    if recent_pick is not None:
+        recent_pick["selected"] = True
+        selected.append(recent_pick)
+
+    salient_pick = _choose_best_candidate(
+        candidates,
+        selected,
+        key_fn=lambda item: item["saliency_score"],
+        max_overlap=max_overlap,
+    )
+    if salient_pick is not None:
+        salient_pick["selected"] = True
+        selected.append(salient_pick)
+
+    def novelty_score(candidate):
+        if not selected:
+            return 0.0
+        distances = []
+        for picked in selected:
+            diff = candidate["descriptor"] - picked["descriptor"]
+            distances.append(float(np.linalg.norm(diff)))
+        return min(distances) if distances else 0.0
+
+    novelty_pick = _choose_best_candidate(
+        candidates,
+        selected,
+        key_fn=novelty_score,
+        max_overlap=max_overlap,
+    )
+    if novelty_pick is not None:
+        novelty_pick["selected"] = True
+        selected.append(novelty_pick)
+
+    while len(selected) < target_chunks:
+        fallback_pick = _choose_best_candidate(
+            candidates,
+            selected,
+            key_fn=lambda item: item["saliency_score"],
+            max_overlap=window_frames,
+        )
+        if fallback_pick is None:
+            break
+        fallback_pick["selected"] = True
+        selected.append(fallback_pick)
+
+    selected = sorted(selected[:target_chunks], key=lambda item: item["start"])
+    if selected:
+        debug_segments = ", ".join(
+            f"[{item['start']}:{item['end']}]"
+            for item in selected
+        )
+        print(f"[MemoryFix/four_chunk_option_a] Selected windows: {debug_segments}")
+
+    if not selected:
+        return video_buffer[:, :, -total_target_frames:, :, :]
+
+    selected_windows = [item["video_window"] for item in selected]
+    stitched = torch.cat(selected_windows, dim=2)
+    return stitched
 
 
 def main():
@@ -489,6 +744,8 @@ def main():
         
         # Initialize video buffer
         video_buffer = cond_video.clone().cpu()
+        seed_frame_count = int(video_buffer.shape[2])
+        frame_action_history = _make_frame_action_history(seed_frame_count)
         
         # Latent size for generation
         latent_size = list(cond_latent.shape)
@@ -505,6 +762,13 @@ def main():
                 cond_for_encode = video_buffer
                 if COND_WINDOW_FRAMES > 0 and video_buffer.shape[2] > COND_WINDOW_FRAMES:
                     cond_for_encode = video_buffer[:, :, -COND_WINDOW_FRAMES:, :, :]
+                history_offset = int(video_buffer.shape[2] - cond_for_encode.shape[2])
+                local_seed_frame_count = max(0, seed_frame_count - history_offset)
+                cond_for_encode = select_history_windows(
+                    cond_for_encode,
+                    seed_frame_count=min(local_seed_frame_count, int(cond_for_encode.shape[2])),
+                    frame_action_history=frame_action_history[-int(cond_for_encode.shape[2]):],
+                )
 
                 current_cond = cond_for_encode.to(local_rank)
                 current_latent = vae.encode(current_cond)
@@ -519,12 +783,15 @@ def main():
             move = torch.tensor(move_indices[curr_start:curr_end], dtype=torch.long, device=local_rank)
             view = torch.tensor(view_indices[curr_start:curr_end], dtype=torch.long, device=local_rank)
             
-            # Pad if needed
+            # Pad with the last specified action if the requested horizon extends
+            # beyond the provided trajectory, instead of falling back to no-op.
             num_frames = args.validation_data.num_frames
             if move.shape[0] < num_frames:
                 pad_len = num_frames - move.shape[0]
-                move = torch.cat([move, torch.zeros(pad_len, dtype=torch.long, device=local_rank)])
-                view = torch.cat([view, torch.zeros(pad_len, dtype=torch.long, device=local_rank)])
+                last_move = move_indices[-1] if move_indices else MOVE_ACTION_MAP["no-op"]
+                last_view = view_indices[-1] if view_indices else VIEW_ACTION_MAP["no-op"]
+                move = torch.cat([move, torch.full((pad_len,), last_move, dtype=torch.long, device=local_rank)])
+                view = torch.cat([view, torch.full((pad_len,), last_view, dtype=torch.long, device=local_rank)])
             
             additional_args = {
                 "image_cond": current_latent,
@@ -549,6 +816,7 @@ def main():
                 
                 decoded_chunk = vae.decode(samples).cpu()
                 video_buffer = torch.cat([video_buffer, decoded_chunk[:, :, 1:]], dim=2)
+                frame_action_history.extend(_slice_actions_for_generated_frames(move, view))
                 
                 print(f"[InfWorld] Chunk {chunk_idx + 1} done. Total frames: {video_buffer.shape[2]}")
                 torch_gc()

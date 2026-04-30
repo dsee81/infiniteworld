@@ -20,6 +20,8 @@ Thumbs.db
 
 # --- Caches ---
 .cache/
+.hf_home/
+.pip-cache/
 
 # --- Model weights / binaries ---
 checkpoints/
@@ -69,3 +71,7 @@ apr*_img_inputs/
 *.webm
 *.avi
 *.gif
+
+# --- GEPA generated inputs ---
+infworld_gepa/generated_actions/
+infworld_gepa/input_data_dataset.json

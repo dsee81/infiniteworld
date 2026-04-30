@@ -1,0 +1,13 @@
+prompts:
+  - prompt: |
+      An indoor hallway and lobby area with tan brick-patterned flooring.
+
+      The scene begins facing a set of double glass doors that serve as an entrance, with bright daylight visible outside. To the left of the doors is a blue vending machine, a bulletin board covered with posters, and a digital wall-mounted monitor. As the camera moves forward and pans to the right, it reveals a wide open space beneath a concrete staircase.
+
+      In this secondary area, there are built-in brick benches, a yellow "wet floor" sign in the distance, and more glass partitions leading to another section of the building. A large portrait and various flyers are pinned to the walls. The ceiling features recessed fluorescent lighting.
+    cond_path: /root/dataDisk/skebin_temp_storage/input_data/44_ori.mp4
+    action_path: /root/dataDisk/skebin_temp_storage/infiniteworld/infworld_gepa/generated_actions/44.json
+    output_name: input44_last5
+    cond_clip_len: 150
+    cond_clip_mode: uniform
+    action_start_mode: chunk_aligned

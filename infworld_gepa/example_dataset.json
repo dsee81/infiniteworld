@@ -1,0 +1,12 @@
+[
+  {
+    "base_prompt": "A serene campus walkway lined with modern glass buildings, green ivy climbing some walls, empty benches, soft dappled sunlight through maple trees.",
+    "condition_path": "assets/example_case/0001.jpg",
+    "action_path": "assets/example_case/0001.json",
+    "condition_context": "Modern glass buildings, ivy, benches, walkway, maple trees, soft daytime light.",
+    "target_traits": "Preserve scene identity, make forward motion explicit, keep the camera path clear, and avoid visual drift.",
+    "output_name": "campus_example",
+    "cond_clip_len": 1,
+    "cond_clip_mode": "first"
+  }
+]
