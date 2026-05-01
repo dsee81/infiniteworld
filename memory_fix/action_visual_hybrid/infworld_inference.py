@@ -788,8 +788,10 @@ def main():
             num_frames = args.validation_data.num_frames
             if move.shape[0] < num_frames:
                 pad_len = num_frames - move.shape[0]
-                move = torch.cat([move, torch.zeros(pad_len, dtype=torch.long, device=local_rank)])
-                view = torch.cat([view, torch.zeros(pad_len, dtype=torch.long, device=local_rank)])
+                last_move = move_indices[-1] if move_indices else MOVE_ACTION_MAP["no-op"]
+                last_view = view_indices[-1] if view_indices else VIEW_ACTION_MAP["no-op"]
+                move = torch.cat([move, torch.full((pad_len,), last_move, dtype=torch.long, device=local_rank)])
+                view = torch.cat([view, torch.full((pad_len,), last_view, dtype=torch.long, device=local_rank)])
             
             additional_args = {
                 "image_cond": current_latent,

@@ -22,7 +22,7 @@ import re
 
 # Add original project root to path so unchanged modules are imported from the main repo.
 VARIANT_ROOT = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.abspath(os.path.join(VARIANT_ROOT, "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(VARIANT_ROOT, "..", "..", ".."))
 sys.path.insert(0, PROJECT_ROOT)
 
 from infworld.utils.prepare_dataloader import get_obj_from_str

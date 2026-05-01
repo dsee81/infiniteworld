@@ -22,7 +22,7 @@ import re
 
 # Add original project root to path so unchanged modules are imported from the main repo.
 VARIANT_ROOT = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.abspath(os.path.join(VARIANT_ROOT, "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(VARIANT_ROOT, "..", "..", ".."))
 sys.path.insert(0, PROJECT_ROOT)
 
 from infworld.utils.prepare_dataloader import get_obj_from_str
@@ -262,8 +262,7 @@ MAX_TASKS = get_env_int("INFWORLD_MAX_TASKS", 0) or None
 HIGH_QUALITY_SAVE = os.environ.get("INFWORLD_HIGH_QUALITY_SAVE", "1") != "0"
 COND_WINDOW_FRAMES = int(os.environ.get("INFWORLD_COND_WINDOW_FRAMES", "0"))  # 0 = use full buffer
 
-# Paths - checkpoint_path is read from config (configs/infworld_config.yaml)
-# Model config for this memory-fix variant
+# Paths - checkpoint_path is read from the folder-local copied config
 CONFIG_PATH = os.path.join(VARIANT_ROOT, 'infworld_config.yaml')
 
 PROMPTS_YAML = os.environ.get(
@@ -273,7 +272,7 @@ PROMPTS_YAML = os.environ.get(
 BUCKET_CONFIG_NAME = 'ASPECT_RATIO_627_F64'
 
 # Output directory
-OUTPUT_BASE = os.environ.get("INFWORLD_OUTPUT_BASE", os.path.join(VARIANT_ROOT, 'outputs'))
+OUTPUT_BASE = os.environ.get("INFWORLD_OUTPUT_BASE", os.path.join(PROJECT_ROOT, 'outputs'))
 
 # Negative prompt for generation quality
 NEGATIVE_PROMPT = "many cars, crowds, Vivid hues, overexposed, static, blurry details, subtitles, style, work, artwork, image, still, overall grayish, worst quality, low quality, JPEG compression artifacts, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn face, deformed, disfigured, deformed limbs, fused fingers, motionless image, cluttered background, three legs, crowded background, walking backwards."
