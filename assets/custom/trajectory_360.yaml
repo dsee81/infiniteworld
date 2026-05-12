@@ -1,0 +1,20 @@
+cond:
+  # Condition on a single image frame.
+  clip_len: 1
+
+inference:
+  # Keep this small for a quick sanity run (total_frames = 161 with defaults).
+  num_chunks: 2
+  chunk_frames: 81
+  overlap: 1
+
+prefix:
+  move: no-op
+  view: no-op
+
+# "360deg" camera trajectory: keep position fixed, rotate view to the right.
+chunks:
+  - move: no-op
+    view: turn right
+    repeat: 2
+

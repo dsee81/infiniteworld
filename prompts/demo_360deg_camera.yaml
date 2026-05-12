@@ -1,0 +1,7 @@
+# Infinite World - Demo (360deg camera turn)
+# Format: [prompt, condition_image_path, action_json_path]
+prompts:
+  - - A detailed modern office interior, realistic lighting, stable geometry, continuous smooth camera rotation.
+    - ./24apr_images/gpt_office.png
+    - ./assets/custom/trajectory_360.json
+

@@ -1,0 +1,49 @@
+#!/bin/bash
+#PBS -N InfWorld_360Cam_1G
+#PBS -l select=1:ncpus=12:mpiprocs=1:ngpus=1:mem=128gb
+#PBS -l walltime=04:00:00
+#PBS -q normal
+#PBS -P personal-dsee009
+#PBS -j oe
+#PBS -o logs/infworld_i2v_360deg_cam_1gpu.log
+
+set -euo pipefail
+
+cd "$PBS_O_WORKDIR"
+
+module load cuda/12.2.2
+
+source activate infworld
+
+export PYTHONUNBUFFERED=1
+export HF_HOME=/scratch/users/ntu/dsee009/hf_cache
+export TRANSFORMERS_CACHE="$HF_HOME/transformers"
+export TORCH_HOME=/scratch/users/ntu/dsee009/torch_cache
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+# Demo: 360-degree camera turn (rotate right in place).
+export INFWORLD_MAX_TASKS=1
+export INFWORLD_NUM_CHUNKS=2
+export INFWORLD_PROMPTS_YAML="$PBS_O_WORKDIR/prompts/demo_360deg_camera.yaml"
+export INFWORLD_OUTPUT_BASE="$PBS_O_WORKDIR/outputs_360deg_camera"
+
+mkdir -p logs "$INFWORLD_OUTPUT_BASE" "$HF_HOME" "$TRANSFORMERS_CACHE" "$TORCH_HOME"
+
+echo "Job ID: ${PBS_JOBID:-unknown}"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo "Workdir: $(pwd)"
+echo "Python: $(which python)"
+echo "Prompt yaml: $INFWORLD_PROMPTS_YAML"
+echo "Output base: $INFWORLD_OUTPUT_BASE"
+echo
+
+command -v nvidia-smi || true
+nvidia-smi || true
+echo
+
+python -c "import torch; print('torch', torch.__version__); print('cuda build', torch.version.cuda); print('cuda available', torch.cuda.is_available()); print('cuda devices', torch.cuda.device_count()); print('device0', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'none')"
+echo
+
+python scripts/infworld_inference.py
+

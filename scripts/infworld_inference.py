@@ -189,6 +189,12 @@ def load_condition_image(image_path, bucket_config, cond_clip_len=None, cond_cli
 # ============================================================================
 def setup_distributed():
     """Setup distributed or single-GPU mode."""
+    if not torch.cuda.is_available() or torch.cuda.device_count() < 1:
+        raise RuntimeError(
+            "CUDA is not available in this process (no visible NVIDIA GPU/driver). "
+            "Run inference on a GPU node (where `nvidia-smi` works) and ensure your job "
+            "requests GPUs (e.g. PBS `ngpus=1`) and activates the `infworld` conda env."
+        )
     if 'RANK' in os.environ:
         # Launched by torchrun or similar
         rank = int(os.environ['RANK'])
